@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:layout_marginEnd="@dimen/margin_card_medium_2"
+    android:layout_marginStart="@dimen/margin_card_medium_2"
+    android:layout_marginTop="@dimen/margin_card_medium_2">
+
+    <TextView
+        android:id="@+id/tv_care_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular_3x"
+        tools:text="Use MMTextView instead of TextView News From God" />
+
+    <ImageView
+        android:id="@+id/iv_care_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/tv_care_title"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:contentDescription="@string/action_settings"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/coke_background" />
+
+    <TextView
+        android:id="@+id/tv_care_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_care_image"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:background="@drawable/bg_category"
+        android:paddingEnd="@dimen/margin_medium"
+        android:textSize="@dimen/text_regular"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="@dimen/margin_medium"
+        android:text="@string/pretty"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tv_care_publisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_care_image"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@+id/tv_care_category"
+        android:padding="@dimen/margin_xsmall"
+        android:text="@string/justin" />
+
+    <TextView
+        android:id="@+id/tv_care_fact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_care_image"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@+id/tv_care_publisher"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableStart="@drawable/ic_minus_square_outlined_button"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_xsmall"
+        android:text="@string/_5302" />
+
+    <TextView
+        android:id="@+id/tv_care_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_care_image"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@+id/tv_care_fact"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableStart="@drawable/ic_chat"
+        android:padding="@dimen/margin_xsmall"
+        android:text="@string/_229"
+        android:textSize="@dimen/text_regular" />
+
+    <TextView
+        android:id="@+id/tv_care_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_care_image"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@+id/tv_care_comment"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableStart="@drawable/ic_like"
+        android:padding="@dimen/margin_xsmall"
+        android:text="@string/_56"
+        android:textSize="@dimen/text_regular" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_care_category"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/divider" />
+
+</RelativeLayout>
