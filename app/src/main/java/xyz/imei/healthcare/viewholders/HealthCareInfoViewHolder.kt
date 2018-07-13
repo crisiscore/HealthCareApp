@@ -1,30 +1,26 @@
 package xyz.imei.healthcare.viewholders
 
-import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.view_holder_health_care_info.view.*
 import xyz.imei.healthcare.data.vos.HealthCareInfoVO
-import xyz.imei.healthcare.delegates.HealthCareDelegate
 
-class HealthCareInfoViewHolder(itemView: View , private val delegate : HealthCareDelegate) : RecyclerView.ViewHolder(itemView) , View.OnClickListener {
+class HealthCareInfoViewHolder(itemView: View) : BaseViewHolder<HealthCareInfoVO>(itemView) {
 
-    init {
-        itemView.setOnClickListener(this)
+    override fun bindData(data : HealthCareInfoVO) {
+
+        itemView.tv_care_title.text = data.title
+
+        itemView.tv_care_publisher.text = data.author.name
+
+        Glide.with(itemView.context)
+                .load(data.image)
+                .into(itemView.iv_care_image)
+
     }
 
     override fun onClick(v: View?) {
-        delegate.onClick()
-    }
-
-    fun bindData(healthCareInfoVO : HealthCareInfoVO) {
-
-        itemView.tv_care_title.text = healthCareInfoVO.title
-
-        Glide.with(itemView.context)
-                .load(healthCareInfoVO.image)
-                .into(itemView.iv_care_image)
-
+        super.onClick(v)
     }
 
 }
