@@ -1,6 +1,5 @@
 package xyz.imei.healthcare.activities
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
@@ -17,7 +16,7 @@ import xyz.imei.healthcare.events.DataEvent
 import xyz.imei.healthcare.events.ErrorApiEvent
 import xyz.imei.healthcare.utils.HCInfoConstants
 
-class MainActivity : AppCompatActivity(), HealthCareDelegate {
+class MainActivity : BaseActivity(), HealthCareDelegate {
 
     private lateinit var adapter: HealthCareAdapter
 
